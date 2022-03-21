@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #1f2632;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 33.75rem;
+  background-color: #323a49;
+  border-radius: 17.5px;
+  padding: 3.25rem 3rem 4.875rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.container h1 {
+  color: #52ffa8;
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .2rem;
+}
+
+.container p {
+  color: #cee3e9;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.divider .desktop {
+  display: block;
+}
+
+.divider .mobile {
+  display: none;
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
+  background-color: #52ffa8;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .3s all ease-in;
+  transition: .3s all ease-in;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(82, 255, 168, 0.75);
+          box-shadow: 0px 0px 30px 2px rgba(82, 255, 168, 0.75);
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 3.25rem 5% 4.875rem;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .container {
+    margin-top: -7.5rem;
+  }
+  .container p {
+    font-size: 1.25rem;
+  }
+  .divider .desktop {
+    display: none;
+  }
+  .divider .mobile {
+    display: block;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./styles.css">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: hsl(217, 19%, 38%);}
+    .attribution a { color: hsl(193, 38%, 86%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="container">
+      <h1>advice #
+        <span id="id">
+          <!-- id -->
+        </span>
+      </h1>
+      <p id="advice">
+        <!-- advice -->
+      </p>
+      <div class="divider">
+        <img src="./images/pattern-divider-desktop.svg" alt="divider" class="desktop">
+        <img src="./images/pattern-divider-mobile.svg" alt="divider" class="mobile">
+      </div>
+
+      <button onclick="getAdvice()">
+        <img src="./images/icon-dice.svg" alt="dice" class="dice">
+      </button>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Natasya</a>.
+  </footer>
+
+  <script>    
+    const url = 'https://api.adviceslip.com/advice'
+
+    async function getAdvice(){
+      const response = await fetch(url)
+      const data = await response.json()
+      const {id, advice} = data.slip
+
+      document.getElementById('id').textContent = id
+      document.getElementById('advice').textContent = advice
+    }
+
+    getAdvice()
+  </script>
+</body>
+</html>
